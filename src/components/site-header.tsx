@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -17,10 +18,20 @@ const navLinks = [
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <Link href="#home" className="flex items-center gap-2 font-bold" aria-label="Home">
+        <Link href="#home" className="flex items-center gap-2 font-bold" aria-label="Home" onClick={(e) => handleLinkClick(e, '#home')}>
           <Code className="h-6 w-6 text-primary" />
           <span className="hidden sm:inline-block text-lg">Vivek's Portfolio</span>
         </Link>
@@ -30,6 +41,7 @@ export function SiteHeader() {
               key={link.href}
               href={link.href}
               className="transition-colors hover:text-primary"
+              onClick={(e) => handleLinkClick(e, link.href)}
             >
               {link.label}
             </Link>
@@ -45,7 +57,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="p-6 pt-12">
-                <Link href="#home" className="flex items-center gap-2 mb-8 font-bold" onClick={() => setIsMenuOpen(false)}>
+                <Link href="#home" className="flex items-center gap-2 mb-8 font-bold" onClick={(e) => handleLinkClick(e, '#home')}>
                   <Code className="h-6 w-6 text-primary" />
                   <span className="text-lg">Vivek's Portfolio</span>
                 </Link>
@@ -55,7 +67,7 @@ export function SiteHeader() {
                       key={link.href}
                       href={link.href}
                       className="transition-colors hover:text-primary py-2"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => handleLinkClick(e, link.href)}
                     >
                       {link.label}
                     </Link>
