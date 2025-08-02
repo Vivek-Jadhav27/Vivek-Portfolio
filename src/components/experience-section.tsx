@@ -17,6 +17,12 @@ const experiences = [
     period: "Jan 2025 - Apr 2025",
     description: "Gained hands-on experience in Machine Learning by working on real-world datasets. Performed data preprocessing using pandas and NumPy, and strengthened problem-solving skills through debugging ML models.",
   },
+  {
+    role: "Android Lead",
+    company: "GDSC GEC Bhavnagar",
+    period: "Aug 2023 - Aug 2024",
+    description: "Led Android development projects and coordinated with cross-functional teams. Organized and conducted Android development workshops attended by 100+ students.",
+  }
 ];
 
 export function ExperienceSection() {
