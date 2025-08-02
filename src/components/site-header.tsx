@@ -33,7 +33,7 @@ export function SiteHeader() {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         <Link href="#home" className="flex items-center gap-2 font-bold" aria-label="Home" onClick={(e) => handleLinkClick(e, '#home')}>
           <Code className="h-6 w-6 text-primary" />
-          <span className="hidden sm:inline-block text-lg">Vivek's Portfolio</span>
+          <span className="hidden sm:inline-block text-lg">Vivek Jadhav's Portfolio</span>
         </Link>
         <nav className="hidden md:flex gap-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -59,7 +59,7 @@ export function SiteHeader() {
               <div className="p-6 pt-12">
                 <Link href="#home" className="flex items-center gap-2 mb-8 font-bold" onClick={(e) => handleLinkClick(e, '#home')}>
                   <Code className="h-6 w-6 text-primary" />
-                  <span className="text-lg">Vivek's Portfolio</span>
+                  <span className="text-lg">Vivek Jadhav's Portfolio</span>
                 </Link>
                 <nav className="flex flex-col gap-4 text-lg">
                   {navLinks.map((link) => (

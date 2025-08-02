@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Linkedin, Github, Download } from 'lucide-react';
+import { Mail, Linkedin, Github, Download, Phone } from 'lucide-react';
 
 export function ContactSection() {
   return (
@@ -20,15 +20,19 @@ export function ContactSection() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold">Contact Details</h3>
                         <div className="space-y-3 text-muted-foreground">
-                            <a href="mailto:vivek.portfolio@example.com" className="flex items-center gap-3 transition-colors hover:text-primary">
-                                <Mail className="h-5 w-5" />
-                                <span>vivek.portfolio@example.com</span>
+                            <a href="tel:+919016175843" className="flex items-center gap-3 transition-colors hover:text-primary">
+                                <Phone className="h-5 w-5" />
+                                <span>+91 9016175843</span>
                             </a>
-                             <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
+                            <a href="mailto:vcjadhav27@gmail.com" className="flex items-center gap-3 transition-colors hover:text-primary">
+                                <Mail className="h-5 w-5" />
+                                <span>vcjadhav27@gmail.com</span>
+                            </a>
+                             <a href="https://linkedin.com/in/vivekjadhav27" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
                                 <Linkedin className="h-5 w-5" />
                                 <span>LinkedIn</span>
                             </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
+                            <a href="https://github.com/Vivek-Jadhav27" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
                                 <Github className="h-5 w-5" />
                                 <span>GitHub</span>
                             </a>

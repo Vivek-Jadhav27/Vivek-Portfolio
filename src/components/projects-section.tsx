@@ -8,27 +8,19 @@ import { ArrowRight } from 'lucide-react';
 const projects = [
   {
     title: 'LeafCare 🌱',
-    description: 'An innovative web app that helps users identify and manage plant diseases, promoting healthier gardens.',
+    description: 'A Flutter app to analyze plant images and provide real-time disease predictions using a CNN model deployed via a Django REST API.',
     image: 'https://placehold.co/600x400.png',
-    link: '#',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase'],
-    dataAiHint: 'plant care app'
+    link: 'https://github.com/Vivek-Jadhav27/LeafCare',
+    tags: ['Flutter', 'Supabase', 'Django', 'TensorFlow', 'Keras'],
+    dataAiHint: 'plant disease detection'
   },
   {
     title: 'Tripeaze ✈️',
-    description: 'A travel planning application that simplifies itinerary creation and collaboration among friends.',
+    description: 'A trip planner app using Flutter and Firebase for authentication, with a Django API backend to generate itineraries.',
     image: 'https://placehold.co/600x400.png',
-    link: '#',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-    dataAiHint: 'travel planning'
-  },
-  {
-    title: 'Habitree 🌳',
-    description: 'A gamified habit-tracking app designed to help users build positive routines by growing a virtual tree.',
-    image: 'https://placehold.co/600x400.png',
-    link: '#',
-    tags: ['React Native', 'Firebase', 'Gamification'],
-    dataAiHint: 'habit tracker'
+    link: 'https://github.com/Vivek-Jadhav27/Tripeaze',
+    tags: ['Flutter', 'Firebase', 'Django'],
+    dataAiHint: 'travel itinerary planner'
   },
 ];
 
@@ -65,7 +57,7 @@ export function ProjectsSection() {
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Button asChild variant="link" className="p-0 h-auto">
-                  <Link href={project.link}>
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
                     View Project <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

@@ -10,16 +10,13 @@ export function AboutSection() {
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">My Journey in Tech</h2>
           <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            From a curious student to a professional developer, my journey has been fueled by a passion for solving problems and building beautiful things with code. I started with a strong foundation in computer science and have since specialized in modern web technologies. I thrive in collaborative environments and am always eager to learn and grow.
-          </p>
-          <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            My background in both design and development allows me to bridge the gap between aesthetics and functionality, creating seamless digital experiences.
+            I am a passionate Software Developer with expertise in Java, Python, SQL, and Flutter. I have hands-on experience in building ML-driven applications and RESTful APIs. I am interested in backend, data-intensive systems, and engineering solutions at scale. As a quick learner with a strong foundation in DSA and problem-solving, I am always eager to take on new challenges.
           </p>
         </div>
         <div className="flex justify-center">
             <Image
               src="https://placehold.co/550x550.png"
-              alt="Vivek's Portrait"
+              alt="Vivek Jadhav's Portrait"
               width={550}
               height={550}
               className="rounded-full object-cover aspect-square shadow-2xl"

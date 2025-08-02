@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="container px-4 md:px-6 text-center z-10">
         <div className="flex flex-col items-center space-y-6">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text text-transparent bg-gradient-to-br from-foreground to-muted-foreground">
-            Hi, I'm Vivek
+            Hi, I'm Vivek Jadhav
           </h1>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             A passionate software developer specializing in building modern, responsive, and user-friendly web applications.

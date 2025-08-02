@@ -1,20 +1,20 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code, Database, Globe, Brush } from 'lucide-react';
+import { Code, Database, Globe, Brush, BrainCircuit } from 'lucide-react';
 import type { ReactElement } from 'react';
 
 const skills: { [key: string]: string[] } = {
-  "Languages": ["JavaScript", "TypeScript", "Python", "HTML5", "CSS3"],
-  "Frameworks & Libraries": ["React", "Next.js", "Node.js", "Express", "Tailwind CSS"],
-  "Databases & Tools": ["MongoDB", "PostgreSQL", "Firebase", "Git", "Docker"],
-  "Design": ["Figma", "UI/UX Principles", "Responsive Design"]
+  "Languages & Frameworks": ["Java", "Python", "Dart", "Flutter", "Django", "SQL", "HTML", "CSS"],
+  "Libraries": ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Matplotlib", "Seaborn"],
+  "Tools & Technologies": ["Firebase", "Supabase", "Git", "REST APIs", "PowerBI"],
+  "Core Competencies": ["DSA", "ML Integration", "Backend Engineering", "Real-time Data Handling"]
 };
 
 const icons: { [key: string]: ReactElement } = {
-  "Languages": <Code className="w-6 h-6 text-primary" />,
-  "Frameworks & Libraries": <Globe className="w-6 h-6 text-primary" />,
-  "Databases & Tools": <Database className="w-6 h-6 text-primary" />,
-  "Design": <Brush className="w-6 h-6 text-primary" />
+  "Languages & Frameworks": <Code className="w-6 h-6 text-primary" />,
+  "Libraries": <Globe className="w-6 h-6 text-primary" />,
+  "Tools & Technologies": <Database className="w-6 h-6 text-primary" />,
+  "Core Competencies": <BrainCircuit className="w-6 h-6 text-primary" />
 };
 
 export function SkillsSection() {
