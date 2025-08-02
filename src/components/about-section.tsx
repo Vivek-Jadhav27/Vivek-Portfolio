@@ -14,7 +14,7 @@ export function AboutSection() {
               I’m a recent Computer Engineering graduate who discovered that coding is a lot like life—you break things, fix them, and then act like you knew what you were doing all along 😅. My journey has been a mix of late-night debugging marathons, tiny victories that felt huge, and learning that caffeine and curiosity are a developer’s best friends.
             </p>
             <p>
-              🌱 Over time, I realized that growth isn’t just about writing better code but also about building consistency, habits, and communities. From mentoring peers to experimenting with new ideas, I’ve enjoyed turning challenges into stepping stones.
+              Over time, I realized that growth isn’t just about writing better code but also about building consistency, habits, and communities. From mentoring peers to experimenting with new ideas, I’ve enjoyed turning challenges into stepping stones.
             </p>
             <p>
              ✨ Today, I see myself as someone who loves solving problems, learning fast, and adding a little creativity (and sometimes humor) into everything I do. My next adventure? Joining a dynamic team where I can keep growing—without breaking too many things on production.
