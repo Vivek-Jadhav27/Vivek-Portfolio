@@ -8,10 +8,18 @@ export function AboutSection() {
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
             About Me
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">My Journey in Tech</h2>
-          <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I am a passionate Software Developer with expertise in Java, Python, SQL, and Flutter. I have hands-on experience in building ML-driven applications and RESTful APIs. I am interested in backend, data-intensive systems, and engineering solutions at scale. As a quick learner with a strong foundation in DSA and problem-solving, I am always eager to take on new challenges.
-          </p>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">My Journey</h2>
+           <div className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed space-y-4">
+            <p>
+              I’m a recent Computer Engineering graduate who discovered that coding is a lot like life—you break things, fix them, and then act like you knew what you were doing all along 😅. My journey has been a mix of late-night debugging marathons, tiny victories that felt huge, and learning that caffeine and curiosity are a developer’s best friends.
+            </p>
+            <p>
+              🌱 Over time, I realized that growth isn’t just about writing better code but also about building consistency, habits, and communities. From mentoring peers to experimenting with new ideas, I’ve enjoyed turning challenges into stepping stones.
+            </p>
+            <p>
+             ✨ Today, I see myself as someone who loves solving problems, learning fast, and adding a little creativity (and sometimes humor) into everything I do. My next adventure? Joining a dynamic team where I can keep growing—without breaking too many things on production.
+            </p>
+          </div>
         </div>
         <div className="flex justify-center">
             <Image
