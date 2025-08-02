@@ -22,6 +22,14 @@ const projects = [
     tags: ['Flutter', 'Firebase', 'Django'],
     dataAiHint: 'travel itinerary planner'
   },
+  {
+    title: 'Habitree 🌳',
+    description: 'A gamified habit-tracking app that motivates users by growing a virtual forest as they complete habits. It uses Flutter and Firebase for a seamless, interactive experience.',
+    image: 'https://placehold.co/600x400.png',
+    link: '#', // The user did not provide a link
+    tags: ['Flutter', 'Firebase'],
+    dataAiHint: 'habit tracker forest'
+  }
 ];
 
 export function ProjectsSection() {
@@ -56,7 +64,7 @@ export function ProjectsSection() {
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button asChild variant="link" className="p-0 h-auto">
+                <Button asChild variant="link" className="p-0 h-auto" disabled={project.link === '#'}>
                   <Link href={project.link} target="_blank" rel="noopener noreferrer">
                     View Project <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
