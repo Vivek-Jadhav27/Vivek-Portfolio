@@ -42,9 +42,9 @@ export function ContactSection() {
                          <h3 className="text-xl font-semibold">My Resume</h3>
                          <p className="text-muted-foreground text-left">Looking for more details? Download my resume to see my full professional history and skills.</p>
                          <Button asChild>
-                            <a href="#" download>
+                            <a href="https://drive.google.com/file/d/1FfcwvpVVyPcl2FkY2LnPXsfIjp0gv8qO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                                 <Download className="mr-2 h-4 w-4" />
-                                Resume download
+                                View Resume
                             </a>
                         </Button>
                     </div>
