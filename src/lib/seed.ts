@@ -5,7 +5,7 @@ import { db } from '@/lib/firebase';
 import { collection, addDoc, Timestamp, getDocs, writeBatch } from 'firebase/firestore';
 
 const skillsData = [
-    { name: "Languages & Frameworks", order: 1, skillList: ["Java", "Python", "Dart", "Flutter", "Django", "SQL", "HTML", "CSS"] },
+    { name: "Languages & Frameworks", order: 1, skillList: ["Java", "Python", "Dart", "Flutter", "Django", "SQL", "HTML", "CSS" ,"TypeScript"] },
     { name: "Libraries", order: 2, skillList: ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Matplotlib", "Seaborn"] },
     { name: "Tools & Technologies", order: 3, skillList: ["Firebase", "Supabase", "Git", "REST APIs", "PowerBI"] },
     { name: "Core Competencies", order: 4, skillList: ["DSA", "ML Integration", "Backend Engineering", "Real-time Data Handling"] }
@@ -22,42 +22,42 @@ const projectsData = [
         order: 1,
     },
     {
-        title: "Weather & Outfit Recommender",
-        description: "A Flutter application that provides real-time weather forecasts and suggests appropriate outfits based on the weather conditions. The app uses a combination of weather APIs and a custom recommendation algorithm to deliver personalized suggestions.",
+        title: "Habitree",
+        description:"Habitree is a Flutter application that helps users build and track daily habits while growing their own virtual forest 🌳. Every habit completed contributes to the growth of trees, making self‑improvement both fun and visually rewarding.", 
         image: "https://placehold.co/600x400.png",
-        link: "#",
+        link: "https://github.com/Vivek-Jadhav27/Habitree",
         tags: ["Flutter", "Dart", "REST APIs", "Mobile App"],
-        dataAiHint: "weather app",
+        dataAiHint: "Habit Tracking App",
         order: 2,
     },
     {
-        title: "Django-Powered E-commerce Platform",
-        description: "A full-featured e-commerce website developed with Django. The platform includes user authentication, product catalog management, a shopping cart, and a secure checkout process, demonstrating robust backend development skills.",
+        title: "LeafCare",
+        description: "LeafCare is an AI-driven mobile application that helps users identify plant diseases through image classification. The system uses Deep Learning (CNNs) to analyze leaf images and provide real-time disease predictions, enabling early detection and better plant care", 
         image: "https://placehold.co/600x400.png",
-        link: "#",
-        tags: ["Django", "Python", "SQL", "E-commerce"],
-        dataAiHint: "online store",
+        link: "https://github.com/Vivek-Jadhav27/LeafCare",
+        tags: ["Django", "Python", "Machine Learning", "Flutter"],
+        dataAiHint: "Plant Disease Detection App",
         order: 3,
     }
 ];
 
 const experienceData = [
     {
-        role: "Software Engineer Intern",
-        company: "Tech Solutions Inc.",
-        period: "Jun 2023 - Aug 2023",
-        description: "Developed and maintained features for a large-scale web application using React and Node.js. Collaborated with a team of developers to deliver high-quality code in an agile environment.",
-        startDate: Timestamp.fromDate(new Date("2023-06-01")),
+        role: "Flutter Developer Intern",
+        company: "Health Tick",
+        period: "Aug 2025 - Present",
+        description:"",
+        startDate: Timestamp.fromDate(new Date("2025-08-12")),
     },
 ];
 
 const educationData = [
      {
         degree: "Bachelor of Engineering in Computer Engineering",
-        school: "LDRP Institute of Technology & Research",
-        period: "2020 - 2024",
-        details: "CGPA: 8.5/10",
-        startDate: Timestamp.fromDate(new Date("2020-07-01")),
+        school: "Government Engineering College, Bhavnagar",
+        period: "2021 - 2025",
+        details: "CGPA: 8.67/10",
+        startDate: Timestamp.fromDate(new Date("2021-07-01")),
     }
 ];
 
