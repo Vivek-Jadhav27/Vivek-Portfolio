@@ -7,6 +7,7 @@ export interface SkillCategory {
     id: string;
     name: string;
     skillList: string[];
+    order: number;
 }
 
 export interface Project {
@@ -17,6 +18,7 @@ export interface Project {
     link: string;
     tags: string[];
     dataAiHint: string;
+    order: number;
 }
 
 export interface Experience {
@@ -65,5 +67,13 @@ export async function getExperience() {
     const educationSnapshot = await getDocs(qEdu);
     const edu = educationSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data(), type: 'education' } as Education));
 
-    return [...work, ...edu].sort((a, b) => b.startDate.toMillis() - a.startDate.toMillis());
+    const allItems = [...work, ...edu];
+
+    allItems.sort((a, b) => {
+        const dateA = a.startDate?.toMillis() || 0;
+        const dateB = b.startDate?.toMillis() || 0;
+        return dateB - dateA;
+    });
+
+    return allItems;
 }
