@@ -1,15 +1,19 @@
+
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
-import { getProjects } from '@/lib/data';
+import type { Project } from '@/lib/data';
 
+interface ProjectsSectionProps {
+  projects: Project[];
+}
 
-export async function ProjectsSection() {
-  const projects = await getProjects();
-
+export function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container px-4 md:px-6">

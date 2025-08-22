@@ -1,8 +1,11 @@
+
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Code, Database, Globe, BrainCircuit } from 'lucide-react';
 import type { ReactElement } from 'react';
-import { getSkills } from '@/lib/data';
+import type { SkillCategory } from '@/lib/data';
 
 const icons: { [key: string]: ReactElement } = {
   "Languages & Frameworks": <Code className="w-6 h-6 text-primary" />,
@@ -11,9 +14,11 @@ const icons: { [key: string]: ReactElement } = {
   "Core Competencies": <BrainCircuit className="w-6 h-6 text-primary" />
 };
 
-export async function SkillsSection() {
-  const skills = await getSkills();
+interface SkillsSectionProps {
+  skills: SkillCategory[];
+}
 
+export function SkillsSection({ skills }: SkillsSectionProps) {
   return (
     <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">

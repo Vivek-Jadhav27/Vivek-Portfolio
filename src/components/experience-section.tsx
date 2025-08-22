@@ -1,12 +1,17 @@
-import { getExperience, Experience, Education } from '@/lib/data';
+
+'use client';
+
+import type { Experience, Education } from '@/lib/data';
 
 function isWork(item: Experience | Education): item is Experience {
     return item.type === 'work';
 }
 
-export async function ExperienceSection() {
-    const items = await getExperience();
-    
+interface ExperienceSectionProps {
+  items: (Experience | Education)[];
+}
+
+export function ExperienceSection({ items }: ExperienceSectionProps) {
   return (
     <section id="experience" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
