@@ -4,35 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight } from 'lucide-react';
+import { getProjects } from '@/lib/data';
 
-const projects = [
-  {
-    title: 'LeafCare 🌱',
-    description: 'A Flutter app to analyze plant images and provide real-time disease predictions using a CNN model deployed via a Django REST API.',
-    image: 'https://placehold.co/600x400.png',
-    link: 'https://github.com/Vivek-Jadhav27/LeafCare',
-    tags: ['Flutter', 'Supabase', 'Django', 'TensorFlow', 'Keras'],
-    dataAiHint: 'plant disease detection'
-  },
-  {
-    title: 'Tripeaze ✈️',
-    description: 'A trip planner app using Flutter and Firebase for authentication, with a Django API backend to generate itineraries.',
-    image: 'https://placehold.co/600x400.png',
-    link: 'https://github.com/Vivek-Jadhav27/Tripeaze',
-    tags: ['Flutter', 'Firebase', 'Django'],
-    dataAiHint: 'travel itinerary planner'
-  },
-  {
-    title: 'Habitree 🌳',
-    description: 'A gamified habit-tracking app that motivates users by growing a virtual forest as they complete habits. It uses Flutter and Firebase for a seamless, interactive experience.',
-    image: 'https://placehold.co/600x400.png',
-    link: '#', // The user did not provide a link
-    tags: ['Flutter', 'Firebase'],
-    dataAiHint: 'habit tracker forest'
-  }
-];
 
-export function ProjectsSection() {
+export async function ProjectsSection() {
+  const projects = await getProjects();
+
   return (
     <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container px-4 md:px-6">
@@ -45,10 +22,10 @@ export function ProjectsSection() {
         </div>
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+            <Card key={project.id} className="flex flex-col overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
               <CardHeader className="p-0">
                 <Image
-                  src={project.image}
+                  src={project.image || 'https://placehold.co/600x400.png'}
                   alt={project.title}
                   width={600}
                   height={400}
@@ -64,8 +41,8 @@ export function ProjectsSection() {
                 <CardDescription>{project.description}</CardDescription>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Button asChild variant="link" className="p-0 h-auto" disabled={project.link === '#'}>
-                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                <Button asChild variant="link" className="p-0 h-auto" disabled={!project.link || project.link === '#'}>
+                  <Link href={project.link || '#'} target="_blank" rel="noopener noreferrer">
                     View Project <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
